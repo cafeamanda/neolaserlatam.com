@@ -1,0 +1,21 @@
+{
+  "name": "Neolaser Sulamerica Website",
+  "authors": [
+    "Amanda Café <contato@cafeamanda.com.br>"
+  ],
+  "description": "Projeto da Neolaser Sulamerica",
+  "main": "index-en.html",
+  "keywords": [
+    "Neolaser",
+    "PLDD",
+    "Neo-laser",
+    "Tratamento",
+    "Laser"
+  ],
+  "license": "MIT",
+  "homepage": "neolasersulamerica.com",
+  "dependencies": {
+    "angular-resource": "^1.5.8",
+    "angular-ui-router": "^0.3.1"
+  }
+}

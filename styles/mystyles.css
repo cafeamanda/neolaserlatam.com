@@ -1,0 +1,332 @@
+/*
+
+                global
+
+**/
+a {
+  color:inherit;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: none;
+  color:green;
+  opacity: 0.5;
+}
+.vcenter {
+  display:flex;
+  align-items: center;
+}
+.breadcrumb {
+  margin-top:30px;
+  margin-left:15px;
+  margin-bottom:0;
+  background:transparent;
+  font-family: 'Lato',sans-serif;
+  color:green;
+}
+.breadcrumb > li+li:before {
+  content: "\203A\00a0";
+}
+.topJ, .middleJ {
+  margin-top:0;
+  margin-bottom:0;
+}
+.bottomJ {
+  margin-bottom:30px;
+}
+@media (min-width:769px) {
+  .dnone {
+    display:none;
+  }
+}
+@media (max-width:768px) {
+  .mnone {
+    display:none;
+  }
+  #main, footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
+/*
+
+                navigation
+
+**/
+
+.navbar-brand, .navbar-brand h1 {
+  float:none;
+  margin-top:0;
+  margin-bottom:0;
+  color:#777;
+  text-shadow: 0 0 0;
+  font-family: 'Jura', sans-serif;
+}
+.navbar-brand:hover {
+  color:inherit;
+  opacity:0.8;
+}
+.navbar-brand strong {
+  color: lightgreen;
+}
+.navbar-inverse {
+  z-index: 1;
+  background:white;
+  border:0;
+  margin: 0;
+  margin-left:15px;
+}
+.navbar-inverse .navbar-nav > li > a {
+  text-shadow: 0 0 0;
+  padding-top:20px;
+  padding-bottom:20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu {
+  background:#05dd43;
+  opacity: 0.8;
+  border:0;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+  text-shadow: 0 0 0;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+#uppernavbarlist {
+  float:right;
+  padding-top:10.3px;
+  padding-bottom: 10.3px;
+}
+#uppernavbar {
+  margin-left:15px;
+  margin-right:15px;
+  border-bottom:1px solid #eee;
+}
+#uppernavbar .navbar-nav > li > a {
+  text-shadow: 0 0 0;
+  font-weight: bold;
+  color:#333;
+}
+#uppernavbar .navbar-nav > li > a:hover, #uppernavbar .navbar-nav > li > a:focus {
+  color:black;
+}
+#lowernavbar .navbar-nav > li > a {
+  font-weight: bold;
+  color: #05dd43;
+  border:0;
+}
+#lowernavbar .navbar-nav .open .dropdown-menu > li > a {
+  color:white;
+  font-weight: bold;
+}
+#lowernavbar .navbar-nav > li > a:hover, #lowernavbar .navbar-nav > li > a:focus, #lowernavbar .navbar-nav > .active, #lowernavbar .navbar-nav > .open > a, #lowernavbar .navbar-nav > .open > a:hover {
+  color: white;
+  background: #05dd43;
+  box-shadow: inset 0 0 0 rgba(0,0,0,0);
+}
+#lowernavbar .navbar-nav .open .dropdown-menu > li > a:hover,
+#lowernavbar .navbar-nav .open .dropdown-menu > li > a:focus {
+  color:#04b637;
+  background: transparent;
+}
+#lowernavbar .navbar-collapse {
+  border:0;
+}
+/* The side navigation button */
+#sideNavButton {
+  text-decoration: none;
+  color:inherit;
+  margin-left: 15px;
+}
+#sideNavButton i {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* The side navigation menu */
+.sidenav {
+   height: 100%; /* 100% Full-height */
+   width: 0; /* 0 width - change this with JavaScript */
+   position: fixed; /* Stay in place */
+   z-index: 2; /* Stay on top */
+   top: 0;
+   left: 0;
+   background-color: green;
+   opacity:0.8;
+   overflow-x: hidden; /* Disable horizontal scroll */
+   padding-top: 60px; /* Place content 60px from the top */
+   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav li {
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 25px;
+   color: white;
+   display: block;
+   transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav li:hover, .offcanvas li:focus{
+   color: darkgreen;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+   transition: margin-left .5s;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+   .sidenav {padding-top: 15px;}
+   .sidenav a {font-size: 18px;}
+}
+
+/*
+
+                  home
+
+*/
+
+#homeWrapper .jumbotron {
+  background: transparent;
+  padding-top:0;
+  padding-bottom:0;
+}
+#homeWrapper .jumbotron h1, h4 {
+  font-family: 'Lato', sans-serif;
+}
+#homeWrapper .jumbotron p {
+  font-size:16px;
+}
+#homeCarousel {
+  margin-bottom:24px;
+}
+#homeCarousel .row {
+  margin-bottom:24px;
+}
+#homeCarousel .round-bg {
+  height: 125px;
+  width:125px;
+  border-radius: 8px;
+  background: #444;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  overflow: hidden;
+
+}
+#homeCarousel .round-bg img {
+  max-height: 125px;
+  float:right;
+}
+#homeCarousel h4, #homeCarousel p {
+  text-align: center;
+}
+/*
+
+                  products
+
+*/
+#productsWrapper .jumbotron {
+  color:white;
+}
+#productsWrapper .jumbotron img {
+  background:#eee;
+  padding-top:15px;
+}
+#productsWrapper .jumbotron h1 {
+  font-size:40px;
+  font-family: 'Rubik One', sans-serif;
+}
+#productsWrapper .jumbotron h3 {
+  font-family: 'Rubik One', sans-serif;
+}
+#productsWrapper .jumbotron p {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+#productsWrapper #topJ {
+  background:#40A35B;
+}
+#productsWrapper #middleJ1 {
+  background:#05dd43;
+}
+#productsWrapper #middleJ2 {
+  background:#11c1f3;
+}
+#productsWrapper #lastJ {
+  background:white;
+  color:#444 !important;
+}
+#productsWrapper #lastJ .btn-simple {
+  border:1px solid #444;
+  text-align: center;
+  margin:15px;
+  background:transparent;
+}
+#productsWrapper #lastJ .btn-simple:hover {
+  border:1px solid #05dd43;
+  color: #05dd43;
+}
+/*
+
+                  neoV 980
+
+*/
+
+#neoV980Wrapper .jumbotron {
+  padding-top:15px;
+  padding-bottom:15px;
+  background:transparent;
+  border-bottom:1px solid #ddd;
+}
+#neoV980Wrapper h1 {
+  font-family: 'Rubik One', sans-serif;
+}
+#neoV980Wrapper i {
+  padding: 8px;
+  background: #05dd43;
+  color:white;
+  font-style: normal;
+  opacity: 0.6;
+}
+
+/*
+
+                  footer
+
+*/
+
+footer .jumbotron {
+  background:#33cd5f;
+  font-family: 'Lato', sans-serif;
+  color:white;
+  margin-bottom:0;
+}
+footer .btn-simple {
+  border:1px solid white;
+  text-align: center;
+  margin:15px;
+  background:transparent;
+}
+footer .btn-simple:hover {
+  border:1px solid green;
+}
+.btn-simple p {
+  margin-top:7.5px;
+  margin-bottom:7.5px;
+}

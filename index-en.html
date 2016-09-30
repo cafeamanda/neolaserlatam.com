@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="neoApp_en-us">
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The 3 meta tags above *MUST* come first in the head; -->
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Neolaser Latin America</title>
+
+    <!-- fonts -->
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type='text/css'>
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type='text/css'>
+
+    <!-- CSS Styles -->
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" href="styles/mystyles.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Jura|Lato|Rubik+One" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div ui-view="header"></div>
+    <div id="main">
+      <div ui-view="content"></div>
+    </div>
+    <div ui-view="footer"></div>
+
+    <!--jQuery-->
+    <script src="jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- angularJS -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
+    <!-- javaScript -->
+    <script src="app/en/scripts/app.js"></script>
+    <script src="app/en/scripts/controllers.js"></script>
+    <script src="app/en/scripts/services.js"></script>
+    <script src="scripts/myscripts.js"></script>
+  </body>
+</html>
