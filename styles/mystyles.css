@@ -3,6 +3,9 @@
                 global
 
 **/
+.Lato {
+  font-family: 'Lato', sans-serif;
+}
 a {
   color:inherit;
   text-decoration: none;
@@ -26,6 +29,23 @@ a:hover, a:focus {
 }
 .breadcrumb > li+li:before {
   content: "\203A\00a0";
+}
+.btn-simple {
+  border:1px solid #444;
+  text-align: center;
+  margin:15px;
+  background:transparent;
+}
+.btn-simple:hover {
+  border:1px solid #05dd43;
+  color: #05dd43;
+}
+.btn-simple p, .btn-simple h3 {
+  margin-top:15px;
+  margin-bottom:15px;
+}
+.btn-simple h3 {
+  font-family: 'Rubik One', sans-serif;
 }
 .topJ, .middleJ {
   margin-top:0;
@@ -64,8 +84,11 @@ a:hover, a:focus {
   text-shadow: 0 0 0;
   font-family: 'Jura', sans-serif;
 }
-.navbar-brand:hover {
-  color:inherit;
+.navbar-brand li {
+  text-shadow: 0 0 0;
+}
+.navbar-brand a:hover {
+  color:gray;
   opacity:0.8;
 }
 .navbar-brand strong {
@@ -288,21 +311,40 @@ a:hover, a:focus {
 
 */
 
-#neoV980Wrapper .jumbotron {
+#neoVWrappers .topJ, #neoVWrappers .middleJ {
   padding-top:15px;
   padding-bottom:15px;
   background:transparent;
   border-bottom:1px solid #ddd;
 }
-#neoV980Wrapper h1 {
-  font-family: 'Rubik One', sans-serif;
+#neoVWrappers .bottomJ {
+  background: transparent;
 }
-#neoV980Wrapper i {
+#neoVWrappers h1 {
+  font-family: 'Rubik One', sans-serif;
+  font-size: 48px;
+}
+#neoVWrappers i {
   padding: 8px;
   background: #05dd43;
   color:white;
   font-style: normal;
   opacity: 0.6;
+}
+.marginJ {
+  margin-left:44px;
+}
+#neoVWrappers .marginJ h4 {
+  font-weight: bold;
+  margin-bottom:10px;
+  font-family: 'Lato', sans-serif;
+}
+#neoVWrappers .marginJ p {
+  font-size:inherit;
+}
+#neoVWrappers .table {
+  margin-top:48px;
+  margin-bottom:48px;
 }
 
 /*
@@ -319,14 +361,8 @@ footer .jumbotron {
 }
 footer .btn-simple {
   border:1px solid white;
-  text-align: center;
-  margin:15px;
-  background:transparent;
 }
 footer .btn-simple:hover {
   border:1px solid green;
-}
-.btn-simple p {
-  margin-top:7.5px;
-  margin-bottom:7.5px;
+  color: green;
 }
