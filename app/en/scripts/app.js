@@ -88,10 +88,11 @@ angular.module('neoApp_en-us', ['ui.router'])
   })
 
   .state('app.EVLA', {
-    url:'endovenous-applications',
+    url:'endovascular-applications',
     views: {
       'content@': {
-        templateUrl: 'app/en/partials/EVLA.html'
+        templateUrl: 'app/en/partials/EVLA.html',
+        controller: 'TreatCtrl'
       }
     }
   })

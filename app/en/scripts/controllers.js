@@ -6,9 +6,9 @@ angular.module('neoApp_en-us')
 
   console.log("Page Controller reporting for duty.");
 
-  // $scope.isPlusSign = function() {
-  //   $scope.plusSign = ($scope.plusSign) ? false : true;
-  //   return $scope.plusSign;
-  // };
+}])
+
+.controller('TreatCtrl', ['$scope', function($scope) {
+  console.log("Treatment Controller reporting for duty.");
 
 }]);
