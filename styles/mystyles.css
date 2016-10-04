@@ -12,7 +12,7 @@ a {
 }
 a:hover, a:focus {
   text-decoration: none;
-  color:green;
+  color:#04aa34;
   opacity: 0.5;
 }
 .vcenter {
@@ -40,6 +40,10 @@ a:hover, a:focus {
   border:1px solid #05dd43;
   color: #05dd43;
 }
+.btn-simple:focus {
+  color: #04aa34;
+  border:1px solid #04aa34;
+}
 .btn-simple p, .btn-simple h3 {
   margin-top:15px;
   margin-bottom:15px;
@@ -49,6 +53,9 @@ a:hover, a:focus {
 }
 .bottomJ {
   margin-bottom:30px;
+}
+.middleJ, .bottomJ {
+  font-family: 'Lato',sans-serif;
 }
 .middleJ,.topJ {
   margin-top:0;
@@ -82,6 +89,9 @@ a:hover, a:focus {
 .img-wrapper img {
   max-height: 125px;
   float:right;
+}
+.show-more {
+  background-image:linear-gradient(to bottom,#fff 0,#ccc 100%) !important;
 }
 
 /*
@@ -317,12 +327,15 @@ a:hover, a:focus {
   font-family: 'Lato', sans-serif;
 }
 #productsWrapper #topJ {
-  background:#40A35B;
-}
-#productsWrapper #middleJ1 {
   background:#05dd43;
 }
+#productsWrapper #middleJ1 {
+  background:#111;
+}
 #productsWrapper #middleJ2 {
+  background:#387ef5;
+}
+#productsWrapper #middleJ3 {
   background:#11c1f3;
 }
 #productsWrapper #lastJ {
@@ -429,16 +442,18 @@ a:hover, a:focus {
 
 */
 
-#kits4x4 img {
+#kits img {
   outline: 1px solid white;
   outline-offset: -5px;
 }
 
 #corona img {
-  border:10px solid white;
-  -webkit-box-shadow: 0 3px 2px 0 #bbb;
-  -moz-box-shadow: 0 3px 2px 0 #bbb;
-  box-shadow: 0 3px 2px 0 #bbb;
+  border:5px solid white;
+  -webkit-box-shadow: -1px 1px 1px 1px #ddd;
+  -moz-box-shadow: -1px 1px 1px 1px #ddd;
+  box-shadow: -1px 1px 1px 1px #ddd;
+  padding-bottom:30px;
+  background:white;
 }
 
 

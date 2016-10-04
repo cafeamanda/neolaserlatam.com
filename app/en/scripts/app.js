@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('neoApp_en-us', ['ui.router'])
+angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
