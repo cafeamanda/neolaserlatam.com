@@ -10,5 +10,4 @@ angular.module('neoApp_en-us')
 
 .controller('TreatCtrl', ['$scope', function($scope) {
   console.log("Treatment Controller reporting for duty.");
-
 }]);
