@@ -378,7 +378,103 @@ a:hover, a:focus {
   margin-top:48px;
   margin-bottom:48px;
 }
+/*
 
+                  treatments.html
+
+*/
+#treatmentsWrapper .jumbotron {
+  color:white;
+}
+#treatmentsWrapper .jumbotron h2 {
+  font-family:'Rubik One',sans-serif;
+  text-align: center;
+}
+#evlaBox {
+  background:#111;
+}
+#evlaBox .img-wrapper {
+  background:black;
+}
+#evlaBox .btn-simple:hover {
+  border: 2px solid #05dd43;
+  color: #05dd43;
+}
+#plddBox {
+  background:#05dd43;
+}
+#plddBox .img-wrapper {
+  background:white;
+}
+#plddBox .btn-simple:hover {
+  border: 2px solid darkgreen;
+  color: darkgreen;
+}
+#entBox {
+  background:#387ef5;
+}
+#entBox .img-wrapper {
+  background:floralwhite;
+}
+#entBox .btn-simple:hover {
+  border: 2px solid #003ea8;
+  color: #003ea8;
+}
+#proctoBox {
+  background:#11c1f3;
+}
+#proctoBox .img-wrapper {
+  background:#111;
+}
+#proctoBox .btn-simple:hover {
+  border: 2px solid #009397;
+  color: #009397;
+}
+#treatmentsWrapper .img-wrapper {
+  height:250px;
+  width:250px;
+  border-radius: 50%;
+}
+#treatmentsWrapper .img-wrapper img {
+   max-height:250px;
+}
+#treatmentsWrapper .btn-simple h4 {
+  font-family: 'Raleway',sans-serif;
+  font-weight: bold;
+}
+#treatmentsWrapper .btn-simple {
+  border: 2px solid #eee;
+}
+#treatmentsWrapper a:hover {
+  opacity:1.0;
+}
+#treatmentsWrapper a:focus {
+  color:#eee;
+}
+
+#neoVsplddBox .btn-simple,
+#neoVsentBox .btn-simple,
+#neoVsproctoBox .btn-simple {
+  border:1px solid #eee;
+}
+#neoVsplddBox .btn-simple:hover {
+  border:1px solid darkgreen;
+}
+#neoVsentBox .btn-simple:hover {
+  border:1px solid #003ea8;
+}
+#neoVsproctoBox .btn-simple:hover {
+  border:1px solid #009397;
+}
+#neoVsplddBox .btn-simple h4,
+#neoVsplddBox .btn-simple:hover h4,
+#neoVsentBox .btn-simple h4,
+#neoVsentBox .btn-simple:hover h4,
+#neoVsproctoBox .btn-simple h4,
+#neoVsproctoBox .btn-simple:hover h4 {
+  font-weight: lighter;
+  font-size:14px;
+}
 /*
                   global to treatments
 */
