@@ -292,17 +292,181 @@ a:hover, a:focus {
   width:5%;
 }
 .fa.fa-chevron-right.fa-2x{
+  text-shadow: 0 0 0;
   position:absolute;
   right:0;
   top:42.5%;
   color:green;
 }
 .fa.fa-chevron-left.fa-2x{
+  text-shadow: 0 0 0;
   color:green;
   position:absolute;
   left:0;
   top:42.5%;
 }
+
+/*
+
+                  about
+
+*/
+
+#aboutWrapper h1 {
+  font-family: 'Rubik One', sans-serif;
+}
+#aboutWrapper p, #aboutFooter address {
+  font-family: 'Lato', sans-serif;
+  font-size:18px;
+  text-align: justify;
+}
+#aboutFooter p, #aboutFooter address  {
+  font-size: 13px;
+}
+.sliderXl {
+    position: relative;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+}
+
+.sliderYt {
+    position: relative;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+}
+
+.sliderYb {
+    position: relative;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+}
+
+.sliderYp {
+  position: relative;
+  transform: translateY(10%);
+  -webkit-transform: translateY(10%);
+}
+
+.slide-left {
+    border-left: 1px solid #eee;
+    padding-left: 24px;
+    animation: slide-left 1.5s forwards, fadein 3.5s forwards;
+    -webkit-animation: slide-left 1.5s forwards, fadein 3.5s forwards;
+}
+
+.slide-top {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    animation: slide-top 1.5s forwards, fadein 3.5s forwards;
+    -webkit-animation: slide-top 1.5s forwards, fadein 3.5s forwards;
+}
+
+.slide-bottom {
+    padding-bottom: 15px;
+    animation: slide-bottom 1.5s forwards, fadein 3.5s forwards;
+    -webkit-animation: slide-bottom 1.5s forwards, fadein 3.5s forwards;
+}
+
+.slide-page {
+    animation: slide-page 0.5s forwards, fadein 1s forwards;
+    -webkit-animation: slide-page 0.5s forwards, fadein 1s forwards;
+}
+
+.fadein {
+  animation: fadein 2.0s forwards;
+  -webkit-animation: fadein 2.0s forwards;
+}
+
+
+/*.slide-out {
+    animation: slide-out 1.0s forwards;
+    -webkit-animation: slide-out 1.0s forwards;
+}*/
+
+
+@keyframes slide-left {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-left {
+    100% { -webkit-transform: translateX(0%); }
+}
+
+@keyframes slide-top {
+    100% { transform: translateY(0%); }
+}
+
+@-webkit-keyframes slide-top {
+    100% { -webkit-transform: translateY(0%); }
+}
+
+@keyframes slide-bottom {
+    100% { transform: translateY(0%); }
+}
+
+@-webkit-keyframes slide-bottom {
+    100% { -webkit-transform: translateY(0%); }
+}
+
+@keyframes slide-page {
+  100% { transform: translateY(0%); }
+}
+
+@-webkit-keyframes slide-page {
+  100% { -webkit-transform: translateY(0%); }
+}
+
+/*@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-100%); }
+}*/
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/*
+
+                  events
+
+*/
+
+#eventsWrapper .jumbotron {
+  margin-top:48px;
+  margin-bottom:48px;
+  background:transparent;
+}
+
 /*
 
                   products
@@ -397,7 +561,7 @@ a:hover, a:focus {
   background:black;
 }
 #evlaBox .btn-simple:hover {
-  border: 2px solid #05dd43;
+  border-color: #05dd43;
   color: #05dd43;
 }
 #plddBox {
@@ -407,7 +571,7 @@ a:hover, a:focus {
   background:white;
 }
 #plddBox .btn-simple:hover {
-  border: 2px solid darkgreen;
+  border-color: darkgreen;
   color: darkgreen;
 }
 #entBox {
@@ -417,7 +581,7 @@ a:hover, a:focus {
   background:floralwhite;
 }
 #entBox .btn-simple:hover {
-  border: 2px solid #003ea8;
+  border-color: #003ea8;
   color: #003ea8;
 }
 #proctoBox {
@@ -427,8 +591,15 @@ a:hover, a:focus {
   background:#111;
 }
 #proctoBox .btn-simple:hover {
-  border: 2px solid #009397;
+  border-color: #009397;
   color: #009397;
+}
+#evlaBox .btn-simple:hover h4,
+#plddBox .btn-simple:hover h4,
+#entBox .btn-simple:hover h4,
+#proctoBox .btn-simple:hover h4 {
+  font-weight: bold;
+  font-size:19px;
 }
 #treatmentsWrapper .img-wrapper {
   height:250px;
@@ -440,10 +611,9 @@ a:hover, a:focus {
 }
 #treatmentsWrapper .btn-simple h4 {
   font-family: 'Raleway',sans-serif;
-  font-weight: bold;
 }
 #treatmentsWrapper .btn-simple {
-  border: 2px solid #eee;
+  border: 1px solid #eee;
 }
 #treatmentsWrapper a:hover {
   opacity:1.0;
@@ -455,7 +625,8 @@ a:hover, a:focus {
 #neoVsplddBox .btn-simple,
 #neoVsentBox .btn-simple,
 #neoVsproctoBox .btn-simple {
-  border:1px solid #eee;
+  border:1px solid #ddd;
+  color:#ddd;
 }
 #neoVsplddBox .btn-simple:hover {
   border:1px solid darkgreen;
