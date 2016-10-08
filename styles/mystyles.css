@@ -466,7 +466,15 @@ a:hover, a:focus {
   margin-bottom:48px;
   background:transparent;
 }
+/*
 
+                  contact
+
+*/
+#contactWrapper address {
+font-family:'Lato',sans-serif;
+font-size: 12px;
+}
 /*
 
                   products
