@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="neoApp_pt-br">
+<html lang="pt" ng-app="neoApp_pt-br">
   <head>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The 3 meta tags above *MUST* come first in the head; -->
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <link rel="shortcut icon" href="images/favicon2.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon2.ico" type="image/x-icon">
-    <title>Neolaser Sulamérica</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Neolaser América Latina</title>
 
     <!-- fonts -->
 
@@ -21,6 +21,10 @@
     <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type='text/css'>
     <link rel="stylesheet" href="styles/mystyles.css">
 
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Jura|Lato|Rubik+One|Raleway|Cinzel+Decorative|Cormorant+SC|Playfair+Display+SC" rel="stylesheet">
+
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -29,19 +33,27 @@
     <![endif]-->
   </head>
   <body>
-    <div ui-view="header"></div>        <div ui-view="content"></div>
+
+    <div ui-view="header"></div>
+    <div id="main">
+      <div ui-view="content"></div>
+    </div>
     <div ui-view="footer"></div>
 
     <!-- angularJS -->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-backtop/dist/angular-backtop.min.js"></script>
     <!--jQuery-->
     <script src="jquery/dist/jquery.min.js"></script>
-    <!-- javaScript -->
+    <script src="bower_components/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
+    <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- javaScript -->
     <script src="app/pt/scripts/app.js"></script>
     <script src="app/pt/scripts/controllers.js"></script>
     <script src="app/pt/scripts/services.js"></script>
+    <script src="scripts/myscripts.js"></script>
   </body>
 </html>

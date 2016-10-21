@@ -1,1 +1,91 @@
-<h1 class="text-center">header</h1>
+<div id="langDiv"><div class="container container-fluid">
+  <ul class="nav navbar-nav pull-right list-unstyled"><li>
+    <i class="fa fa-globe"></i>
+    <select onchange="location=this.value;" id="langSelect">
+      <option value="#">Português</option>
+      <option value="index-en.html">English</option>
+    </select>
+  </li></ul></div></div>
+</div>
+<div class="headerWrapper">
+  <div id="sideNav" class="sidenav dnone">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul class="list-unstyled">
+      <li><a ui-sref="app">Início</a></li>
+      <li><a ui-sref="app.about">Sobre</a></li>
+      <li class="collapsed drop" role="button" data-toggle="collapse" href="#products">
+      Produtos <span class="caret"></span></li>
+      <ul id="products" class="collapse">
+        <li><a ui-sref="app.neoV980">neoV 980</a></li>
+        <li><a ui-sref="app.neoV1470">neoV 1470</a></li>
+      </ul>
+      <li class="collapsed drop" role="button" data-toggle="collapse" href="#treatments">
+      Tratamentos <span class="caret"></span>
+      </li>
+      <ul id="treatments" class="collapse">
+        <li><a ui-sref="app.PLDD">PLDD</a></li>
+        <li><a ui-sref="app.EVLA">Vascular</a></li>
+        <li><a ui-sref="app.ENT">Otorrinolaringologia</a></li>
+        <li><a ui-sref="app.proctology">Proctologia</a></li>
+      </ul>
+      <li><a ui-sref="app.events">Eventos</a></li>
+      <li><a ui-sref="app.contact">Fale Conosco</a></li>
+      <li><a ui-sref="app.signin">Log in</a></li>
+    </ul>
+  </div>
+  <!-- 1st navbar -->
+  <nav id="uppernavbar" class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed mnone" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <ul class="navbar-brand list-unstyled">
+          <a ui-sref="app">
+          <li><h1><strong>neo</strong>laser</h1></li></a>
+          </ul>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <div class="container container-fluid">
+        <ul class="nav navbar-nav" id="lang-brand">
+          <li><a>América Latina</a></li>
+        </ul>
+        <ul class="nav navbar-nav" id="uppernavbarlist">
+          <li><a ui-sref="app.about">SOBRE</a></li>
+          <li><a ui-sref="app.events">EVENTOS</a></li>
+          <li><a ui-sref="app.contact">FALE CONOSCO</a></li>
+          <li><a href="#">LOGIN</a></li>
+        </ul>
+      </div>
+      </div>
+  </nav><!-- 1st navbar -->
+
+  <!-- 2nd navbar -->
+  <nav id="lowernavbar" class="navbar navbar-inverse navbar-static-top mnone" role="navigation">
+      <div class="navbar-collapse collapse">
+        <ul id="lowernavbarlist" class="nav navbar-nav">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUTOS <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a ui-sref="app.neoV980">NEOV 980</a></li>
+              <li><a ui-sref="app.neoV1470">NEOV 1470</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TRATAMENTOS <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a ui-sref="app.EVLA">APLICAÇÕES ENDOVASCULARES</a></li>
+              <li><a ui-sref="app.PLDD">PLDD</a></li>
+              <li><a ui-sref="app.proctology">PROCTOLOGIA</a></li>
+              <li><a ui-sref="app.ENT">OTORRINOLARINGOLOGIA</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+  </nav><!-- fim da barra de navegação -->
+  <a role="button" id="sideNavButton" class="dnone" onclick="openNav()">
+    <i class="fa fa-bars fa-2x"></i>
+  </a>
+</div>

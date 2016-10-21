@@ -1,7 +1,17 @@
+<div id="langDiv"><div class="container container-fluid">
+  <ul class="nav navbar-nav pull-right list-unstyled"><li>
+    <i class="fa fa-globe"></i>
+    <select onchange="location=this.value;" id="langSelect">
+      <option value="#">English</option>
+      <option value="index-pt.html">Português</option>
+    </select>
+  </li></ul></div></div>
+</div>
 <div class="headerWrapper">
   <div id="sideNav" class="sidenav dnone">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <ul class="list-unstyled">
+      <li><a ui-sref="app">Home</a></li>
       <li><a ui-sref="app.about">About</a></li>
       <li class="collapsed drop" role="button" data-toggle="collapse" href="#products">
       Products <span class="caret"></span></li>
@@ -54,26 +64,26 @@
 
   <!-- 2nd navbar -->
   <nav id="lowernavbar" class="navbar navbar-inverse navbar-static-top mnone" role="navigation">
-      <div class="navbar-collapse collapse">
-        <ul id="lowernavbarlist" class="nav navbar-nav">
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a ui-sref="app.neoV980">NEOV 980</a></li>
-              <li><a ui-sref="app.neoV1470">NEOV 1470</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TREATMENTS <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a ui-sref="app.EVLA">ENDOVASCULAR APPLICATIONS</a></li>
-              <li><a ui-sref="app.PLDD">PLDD</a></li>
-              <li><a ui-sref="app.proctology">PROCTOLOGY</a></li>
-              <li><a ui-sref="app.ENT">OTOLARYNGOLOGY</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+    <div class="navbar-collapse collapse">
+      <ul id="lowernavbarlist" class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a ui-sref="app.neoV980">NEOV 980</a></li>
+            <li><a ui-sref="app.neoV1470">NEOV 1470</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TREATMENTS <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a ui-sref="app.EVLA">ENDOVASCULAR APPLICATIONS</a></li>
+            <li><a ui-sref="app.PLDD">PLDD</a></li>
+            <li><a ui-sref="app.proctology">PROCTOLOGY</a></li>
+            <li><a ui-sref="app.ENT">OTOLARYNGOLOGY</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </nav><!-- fim da barra de navegação -->
   <a role="button" id="sideNavButton" class="dnone" onclick="openNav()">
     <i class="fa fa-bars fa-2x"></i>
