@@ -1,4 +1,77 @@
-<h1 class="text-center">home</h1>
-
-<br>
-<a ui-sref="app.faleconosco">Contato</a>
+<div id="homeWrapper">
+  <div class="jumbotron">
+    <div class="navbar">
+      <div class="col-xs-12 col-lg-4">
+        <p style="padding:30px;"></p>
+        <h1>SISTEMAS<br>DE CIRURGIA<br>A LASER</h1>
+        <p>Nós oferecemos qualidade top de linha e design de alto nível, fornecendo excelência em performance e funcionalidade, flexibilidade e modularidade, tudo a um preço acessível.</p>
+      </div>
+      <div class="col-xs-12 col-lg-8">
+        <img src="images/laser-nobg.png" class="img-responsive">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="homeCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="row">
+            <div class="col-sm-4 col-xs-4">
+              <div class="img-wrapper">
+                <a ui-sref="app.PLDD"><img src="images/back-nobg.png" alt="PLDD"></a>
+              </div>
+              <h4>COLUNA</h4>
+              <p class="col-sm-10 col-sm-offset-1">Tratamento para dores de coluna resultantes de hérnia de disco.<br><a ui-sref="app.PLDD"><strong>Saiba mais sobre PLDD</strong></a></p>
+            </div>
+            <div class="col-sm-4 col-xs-4">
+              <div class="img-wrapper">
+                <a ui-sref="app.EVLA"><img src="images/knee-blackNgreen.png" alt="EVLA" class=""></a>
+              </div>
+              <h4>VASCULAR</h4>
+              <p class="col-sm-10 col-sm-offset-1">Tratamento de varizes.<br><a ui-sref="app.EVLA"><strong>Saiba Mais</strong></a></p>
+            </div>
+            <div class="col-sm-4 col-xs-4">
+              <div class="img-wrapper">
+                <a ui-sref="app.ENT"><img src="images/ENT-nobg.png" alt="ENT" class=""></a>
+              </div>
+              <h4>OTORRINO</h4>
+              <p class="col-sm-10 col-sm-offset-1">Cavidade oral, laríngea, nasal, faríngea e procedimentos otológicos. <a ui-sref="app.ENT"><strong>Saiba Mais</strong></a></p>
+            </div>
+          </div><!--/row-->
+        </div><!--/item-->
+        <div class="item">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <div class="img-wrapper">
+                <a ui-sref="app.proctology"><img src="images/proctology-transparent.png" alt="Proctology" class=""></a>
+              </div>
+              <h4>PROCTOLOGIA</h4>
+              <p class="col-sm-10 col-sm-offset-1">Novas opções de tratamento<br><a ui-sref="app.proctology"><strong>Saiba Mais</strong></a></p>
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <div class="img-wrapper">
+                <a ui-sref="app.products"><img src="images/smallest-machine.png" alt="Image" class="img-responsive"></a>
+              </div>
+              <h4>DESIGN DE RENOME GLOBAL</h4>
+              <p class="col-sm-10 col-sm-offset-1">O menor, o mais leve e o mais portável sistema a laser de sua classe de potência.<br><a ui-sref="app.products"><strong>Saiba mais sobre o neoV laser</strong></a></p>
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <div class="img-wrapper">
+                <a ui-sref="app.about"><img src="images/neolaser-logo.png" alt="NEO V980" class="center-block img-responsive"></a>
+              </div>
+              <h4>SOBRE</h4>
+              <p class="col-sm-10 col-sm-offset-1">Sobre a Neolaser América Latina<br><a ui-sref="app.about"><strong>Saiba Mais</strong></a></p>
+            </div>
+          </div><!--/row-->
+        </div><!--/item-->
+      </div><!--/carousel-inner-->
+      <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev">
+        <i class="fa fa-chevron-left fa-2x" aria-hidden="true" id="right-i"></i>
+      </a>
+      <a class="right carousel-control" href="#homeCarousel" role="button" data-slide="next">
+        <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>

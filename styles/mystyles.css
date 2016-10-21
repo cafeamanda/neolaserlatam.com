@@ -259,6 +259,23 @@ a:hover, a:focus {
    .sidenav {padding-top: 15px;}
    .sidenav a {font-size: 18px;}
 }
+/*
+
+                  header
+
+*/
+#langDiv {
+  padding-top:1px;
+  padding-bottom:4px;
+  border-bottom: 1px solid #f9f9f9;
+}
+#langSelect {
+  background:white;
+  padding:0;
+  margin:0;
+  font-size: 10px;
+  border:1px solid #f5f5f5;
+}
 
 /*
 
@@ -562,27 +579,27 @@ font-size: 12px;
   font-family:'Rubik One',sans-serif;
   text-align: center;
 }
-#evlaBox {
+#evlaBox, #proctoBox {
   background:#111;
 }
-#evlaBox .img-wrapper {
+#evlaBox .img-wrapper, #proctoBox .img-wrapper {
   background:black;
 }
-#evlaBox .btn-simple:hover {
-  border-color: #05dd43;
-  color: #05dd43;
+#evlaBox .btn-simple:hover, #proctoBox .btn-simple:hover {
+  border-color: #11c1f7;
+  color: #11c1f7;
 }
-#plddBox {
+#plddBox, #entBox {
   background:#05dd43;
 }
-#plddBox .img-wrapper {
+#plddBox .img-wrapper, #entBox .img-wrapper {
   background:white;
 }
-#plddBox .btn-simple:hover {
-  border-color: darkgreen;
-  color: darkgreen;
+#plddBox .btn-simple:hover, #entBox .btn-simple:hover {
+  border-color: #000;
+  color: #000;
 }
-#entBox {
+/*#entBox {
   background:#387ef5;
 }
 #entBox .img-wrapper {
@@ -591,8 +608,8 @@ font-size: 12px;
 #entBox .btn-simple:hover {
   border-color: #003ea8;
   color: #003ea8;
-}
-#proctoBox {
+}*/
+/*#proctoBox {
   background:#11c1f3;
 }
 #proctoBox .img-wrapper {
@@ -601,7 +618,7 @@ font-size: 12px;
 #proctoBox .btn-simple:hover {
   border-color: #009397;
   color: #009397;
-}
+}*/
 #evlaBox .btn-simple:hover h4,
 #plddBox .btn-simple:hover h4,
 #entBox .btn-simple:hover h4,
@@ -622,6 +639,7 @@ font-size: 12px;
 }
 #treatmentsWrapper .btn-simple {
   border: 1px solid #eee;
+  border-radius:6px;
 }
 #treatmentsWrapper a:hover {
   opacity:1.0;
@@ -636,14 +654,15 @@ font-size: 12px;
   border:1px solid #ddd;
   color:#ddd;
 }
-#neoVsplddBox .btn-simple:hover {
-  border:1px solid darkgreen;
+#neoVsplddBox .btn-simple:hover, #neoVsentBox .btn-simple:hover {
+  border:1px solid #111;
 }
-#neoVsentBox .btn-simple:hover {
+/*#neoVsentBox .btn-simple:hover {
   border:1px solid #003ea8;
-}
+}*/
 #neoVsproctoBox .btn-simple:hover {
-  border:1px solid #009397;
+  color: #11c1f7;
+  border:1px solid #11c1f7;
 }
 #neoVsplddBox .btn-simple h4,
 #neoVsplddBox .btn-simple:hover h4,
@@ -746,10 +765,19 @@ footer .jumbotron {
 }
 footer .btn-simple {
   border:1px solid white;
+  border-radius: 6px;
 }
 footer .btn-simple:hover {
-  border:1px solid green;
+  border:1px solid darkgreen;
   color: green;
+}
+footer .btn-simple p {
+  margin-top:5px;
+  margin-bottom:5px;
+}
+footer .btn-simple p:hover {
+  font-weight: bolder;
+  color:darkgreen;
 }
 
 /*
