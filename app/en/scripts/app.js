@@ -140,4 +140,14 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
   $rootScope.$on('$stateChangeSuccess', function() {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   });
-});
+})
+
+.run(['$rootScope', '$location', '$window', function($rootScope, $location, $window) {
+  $rootScope
+  .$on('$stateChangeSuccess', function(event){
+    if (!$window.ga) return;
+    $window.ga('send', 'pageview', {
+      page: $location.path()
+    });
+  })
+}]);
