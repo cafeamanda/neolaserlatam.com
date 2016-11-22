@@ -60,7 +60,7 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
   })
 
   .state('app.neoV980', {
-    url:'neoV-980',
+    url:'our-products/neoV-980',
     views: {
       'content@': {
         templateUrl: 'app/en/partials/neoV980.html',
@@ -70,7 +70,7 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
   })
 
   .state('app.neoV1470', {
-    url:'neoV-1470',
+    url:'our-products/neoV-1470',
     views: {
       'content@': {
         templateUrl: 'app/en/partials/neoV1470.html'
@@ -88,7 +88,7 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
   })
 
   .state('app.EVLA', {
-    url:'endovascular-applications',
+    url:'treatments/endovascular-applications',
     views: {
       'content@': {
         templateUrl: 'app/en/partials/EVLA.html',
@@ -98,7 +98,7 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
   })
 
   .state('app.PLDD', {
-    url:'percutaneous-laser-disc-decompression',
+    url:'treatments/percutaneous-laser-disc-decompression',
     views: {
       'content@': {
         templateUrl: 'app/en/partials/PLDD.html'
@@ -107,7 +107,7 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
   })
 
   .state('app.proctology', {
-    url:'proctology',
+    url:'treatments/proctology',
     views: {
       'content@': {
         templateUrl: 'app/en/partials/proctology.html'
@@ -116,7 +116,7 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
   })
 
   .state('app.ENT', {
-    url:'otolaryngology',
+    url:'treatments/ENT',
     views: {
       'content@': {
         templateUrl: 'app/en/partials/ENT.html'
