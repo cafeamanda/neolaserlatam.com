@@ -2,12 +2,14 @@
 
 angular.module('neoApp_en-us')
 
-.controller('PageCtrl', ['$scope', function ($scope) {
-
-  console.log("Page Controller reporting for duty.");
-
+.controller('ProctoCtrl', ['$scope', 'proctoFactory', function ($scope, proctoFactory) {
+  $scope.proctofiles = proctoFactory.getFiles();
 }])
 
-.controller('TreatCtrl', ['$scope', function($scope) {
-  console.log("Treatment Controller reporting for duty.");
+.controller('PLDDCtrl', ['$scope', 'plddFactory', function ($scope, plddFactory) {
+  $scope.plddfiles = plddFactory.getFiles();
+}])
+
+.controller('ENTCtrl', ['$scope', 'entFactory', function ($scope, entFactory) {
+  $scope.entfiles = entFactory.getFiles();
 }]);

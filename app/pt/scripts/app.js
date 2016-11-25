@@ -14,7 +14,6 @@ angular.module('neoApp_pt-br', ['ui.router', 'angular.backtop'])
       },
       'content': {
         templateUrl:'app/pt/partials/home.html',
-        controller:'PageCtrl'
       },
       'footer': {
         templateUrl: 'app/pt/templates/footer.html'
@@ -45,7 +44,6 @@ angular.module('neoApp_pt-br', ['ui.router', 'angular.backtop'])
     views: {
       'content@': {
         templateUrl: 'app/pt/partials/contact.html',
-        controller: 'PageCtrl'
       }
     }
   })
@@ -64,7 +62,6 @@ angular.module('neoApp_pt-br', ['ui.router', 'angular.backtop'])
     views: {
       'content@': {
         templateUrl: 'app/pt/partials/neoV980.html',
-        controller: 'PageCtrl'
       }
     }
   })
@@ -92,7 +89,6 @@ angular.module('neoApp_pt-br', ['ui.router', 'angular.backtop'])
     views: {
       'content@': {
         templateUrl: 'app/pt/partials/EVLA.html',
-        controller: 'TreatCtrl'
       }
     }
   })
@@ -101,7 +97,8 @@ angular.module('neoApp_pt-br', ['ui.router', 'angular.backtop'])
     url:'tratamentos/PLDD',
     views: {
       'content@': {
-        templateUrl: 'app/pt/partials/PLDD.html'
+        templateUrl: 'app/pt/partials/PLDD.html',
+        controller: 'PLDDCtrl'
       }
     }
   })
@@ -110,7 +107,8 @@ angular.module('neoApp_pt-br', ['ui.router', 'angular.backtop'])
     url:'tratamentos/proctologia',
     views: {
       'content@': {
-        templateUrl: 'app/pt/partials/proctology.html'
+        templateUrl: 'app/pt/partials/proctology.html',
+        controller: 'ProctoCtrl'
       }
     }
   })
@@ -119,7 +117,8 @@ angular.module('neoApp_pt-br', ['ui.router', 'angular.backtop'])
     url:'tratamentos/ENT',
     views: {
       'content@': {
-        templateUrl: 'app/pt/partials/ENT.html'
+        templateUrl: 'app/pt/partials/ENT.html',
+        controller: 'ENTCtrl'
       }
     }
   })
