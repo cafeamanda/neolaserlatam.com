@@ -14,7 +14,6 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
       },
       'content': {
         templateUrl:'app/en/partials/home.html',
-        controller:'PageCtrl'
       },
       'footer': {
         templateUrl: 'app/en/templates/footer.html'
@@ -45,7 +44,6 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
     views: {
       'content@': {
         templateUrl: 'app/en/partials/contact.html',
-        controller: 'PageCtrl'
       }
     }
   })
@@ -64,7 +62,6 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
     views: {
       'content@': {
         templateUrl: 'app/en/partials/neoV980.html',
-        controller: 'PageCtrl'
       }
     }
   })
@@ -92,7 +89,6 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
     views: {
       'content@': {
         templateUrl: 'app/en/partials/EVLA.html',
-        controller: 'TreatCtrl'
       }
     }
   })
@@ -101,7 +97,8 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
     url:'treatments/percutaneous-laser-disc-decompression',
     views: {
       'content@': {
-        templateUrl: 'app/en/partials/PLDD.html'
+        templateUrl: 'app/en/partials/PLDD.html',
+        controller: 'PLDDCtrl'
       }
     }
   })
@@ -110,7 +107,8 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
     url:'treatments/proctology',
     views: {
       'content@': {
-        templateUrl: 'app/en/partials/proctology.html'
+        templateUrl: 'app/en/partials/proctology.html',
+        controller: 'ProctoCtrl'
       }
     }
   })
@@ -119,7 +117,8 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
     url:'treatments/ENT',
     views: {
       'content@': {
-        templateUrl: 'app/en/partials/ENT.html'
+        templateUrl: 'app/en/partials/ENT.html',
+        controller: 'ENTCtrl'
       }
     }
   })

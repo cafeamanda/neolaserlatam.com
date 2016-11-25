@@ -154,6 +154,40 @@
       <div class="jumbotron middleJ">
         <div class="container">
           <div class="row">
+            <div class="collapsed" role="button" data-toggle="collapse" href="#articles" ng-click="plusSignJ7 = !plusSignJ7">
+              <h3 class="Lato"><i class="fa pull-right" ng-class="plusSignJ7 ? 'fa-chevron-up' : 'fa-chevron-down'"></i>&emsp;ARTIGOS RELACIONADOS</h3>
+            </div>
+            <div id="articles" class="collapse marginJ inner">
+              <!-- toggleable content -->
+              <div ng-repeat="file in plddfiles">
+                <div class="col-xs-12 col-sm-6">
+                  <div class="media">
+                    <div class="media-left media-top">
+                      <a ng-href="{{file.path}}" download>
+                        <i class="fa fa-download fa-3x"></i>
+                      </a>
+                    </div>
+                    <div class="media-body">
+                      <a ng-href="{{file.path}}" download>
+                        <h4 class="media-heading">
+                          {{file.title | uppercase}}
+                        </h4>
+                      </a>
+                      <p style="margin-bottom:0;"><strong>Autores:</strong> {{file.authors}}</p>
+                      <p><strong>Data:</strong> {{file.date}}</p>
+                      <hr>
+                      <br/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron middleJ">
+        <div class="container">
+          <div class="row">
             <div class="collapsed" role="button" data-toggle="collapse" href="#videos" ng-click="plusSignJ6 = !plusSignJ6">
               <h3 class="Lato"><i class="fa pull-right" ng-class="plusSignJ6 ? 'fa-chevron-down' : 'fa-chevron-up'"></i>&emsp;<i class="fa fa-youtube-play" style="color:inherit;background:inherit;opacity:1.0;"></i> VÍDEOS RELACIONADOS</h3>
             </div>
