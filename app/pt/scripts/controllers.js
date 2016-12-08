@@ -12,4 +12,10 @@ angular.module('neoApp_pt-br')
 
 .controller('ENTCtrl', ['$scope', 'entFactory', function ($scope, entFactory) {
   $scope.entfiles = entFactory.getFiles();
-}]);
+}])
+
+.controller('ArticlesCtrl', ['$scope', 'proctoFactory', 'plddFactory', 'entFactory', function ($scope, proctoFactory, plddFactory, entFactory) {
+  $scope.proctofiles = proctoFactory.getFiles();
+  $scope.plddfiles = plddFactory.getFiles();
+  $scope.entfiles = entFactory.getFiles();
+}]);;

@@ -764,6 +764,22 @@ font-size: 12px;
   background:white;
 }
 
+/*
+
+
+                  articles
+
+*/
+#articlesWrapper h1 {
+  font-family: 'Rubik One', sans-serif;
+  font-size: 48px;
+}
+.clickToExpand::after {
+  content: "(click to expand)";
+}
+.clickToHide::after {
+  content: "(click to hide)";
+}
 
 /*
 

@@ -123,6 +123,16 @@ angular.module('neoApp_pt-br', ['ui.router', 'angular.backtop'])
     }
   })
 
+  .state('app.articles', {
+    url:'tratamentos/artigos-relacionados',
+    views: {
+      'content@': {
+        templateUrl: 'app/pt/partials/articles.html',
+        controller: 'ArticlesCtrl'
+      }
+    }
+  })
+
   .state('app.signin', {
     url:'sign-in',
     views: {
