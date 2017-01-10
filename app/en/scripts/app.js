@@ -30,6 +30,15 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
     }
   })
 
+  .state('app.salesrep', {
+    url:'find-your-rep',
+    views: {
+      'content@': {
+        templateUrl: 'app/en/partials/salesrep.html'
+      }
+    }
+  })
+
   .state('app.events', {
     url:'latest-events',
     views: {
