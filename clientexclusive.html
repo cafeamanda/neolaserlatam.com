@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The 3 meta tags above *MUST* come first in the head; -->
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Neolaser Latin America</title>>
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+    <style>
+      body {
+        padding-top: 50px;
+      }
+      .page-header {
+        margin-bottom: 96px;
+      }
+      .sub-header {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+      }
+      .navbar-fixed-top {
+        border: 0;
+      }
+      .sidebar {
+        display: none;
+      }
+      @media (min-width: 768px) {
+        .sidebar {
+          position: fixed;
+          top: 51px;
+          bottom: 0;
+          left: 0;
+          z-index: 1000;
+          display: block;
+          padding: 20px;
+          overflow-x: hidden;
+          overflow-y: auto;
+          background-color: #f5f5f5;
+          border-right: 1px solid #eee;
+        }
+      }
+      .nav-sidebar {
+        margin-right: -21px;
+        margin-bottom: 20px;
+        margin-left: -20px;
+      }
+      .nav-sidebar > li > a {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+      .nav-sidebar > .active > a,
+      .nav-sidebar > .active > a:hover,
+      .nav-sidebar > .active > a:focus {
+        color: #fff;
+        background-color: #428bca;
+      }
+      .main {
+        padding: 20px;
+      }
+      @media (min-width: 768px) {
+        .main {
+          padding-right: 40px;
+          padding-left: 40px;
+        }
+      }
+      .main .page-header {
+        margin-top: 0;
+      }
+      .placeholders {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .placeholders h4 {
+        margin-bottom: 0;
+      }
+      .placeholder {
+        margin-bottom: 20px;
+      }
+      .placeholder img {
+        display: inline-block;
+        border-radius: 50%;
+      }
+      h1, h2, h3 {
+        font-family: 'Secular One', sans-serif;
+        font-variant: small-caps;
+      }
+      h2 {
+        margin-top: 96px;
+      }
+      #artable {
+        font-family: 'Lato', sans-serif;
+      }
+      tr a {
+        font-size: 22px;
+      }
+      tr a, #protocolContainer a {
+        text-decoration: none;
+        color:inherit;
+      }
+      tr a:hover, #protocolContainer a:hover {
+        color:lightgreen;
+      }
+      #protocolContainer {
+        text-align: center;
+      }
+      .iframe-container {
+          position: relative;
+          padding-bottom: 56.25%;
+          padding-top: 35px;
+          height: 0;
+          overflow: hidden;
+      }
+      .iframe-container iframe {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Oswald|Secular+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Neolaser Latin America <small style="opacity:0.3;">&emsp;| Client Exclusive</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://neolaserlatam.com">Log Out</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul id="sideNav" class="nav nav-sidebar">
+            <li><a href="#protocols">Treatment Protocols</a></li>
+            <li><a href="#articles">Related Articles <span class="sr-only">(current)</span></a></li>
+            <li><a href="#videos">Videos</a></li>
+          </ul>
+          <ul class="nav nav-sidebar"></ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Exclusive Material</h1>
+
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="images/back-nobg.png" height="150" alt="">
+              <h4>PLDD</h4>
+              <span class="text-muted">Laser Spine Surgery</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="images/ENT-nobg.png" height="150" alt="">
+              <h4>ENT</h4>
+              <span class="text-muted">Ears, nose &amp; throat</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="images/knee-blackNgreen.png" height="150" alt="">
+              <h4>VASCULAR</h4>
+              <span class="text-muted">Endovascular applications</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="images/proctology-transparent.png" height="150" alt="">
+              <h4>PROCTOLOGY</h4>
+              <span class="text-muted">Fistula-in-ano &amp; hemorrhoids</span>
+            </div>
+          </div>
+          <h2 id="protocols" class="sub-header">Treatment Protocols</h2>
+          <div id="protocolContainer">
+            <div class="row">
+              <div class="col-xs-4 col-sm-4">
+                <a href="files/PROTOCOLS/ENDOVENOUS LASER ABLATION (EVLA).pdf" target="_blank">
+                  <h1><i class="fa fa-file-pdf-o"></i></h1>
+                  <p>Procedure Protocol for Endovenous Laser Ablation (EVLA)</p>
+                </a>
+              </div>
+              <div class="col-xs-4 col-sm-4">
+                <a href="files/PROTOCOLS/Laser Coagulation  of Hemorrhoids (LCH).pdf" target="_blank">
+                  <h1><i class="fa fa-file-pdf-o"></i></i></h1>
+                  <p>Procedure Protocol for Laser Coagulation  of Hemorrhoids (LCH)</p>
+                </a>
+              </div>
+              <div class="col-xs-4 col-sm-4">
+                <a href="files/PROTOCOLS/Laser Coagulation of Anal Fistula (LCAF).pdf" target="_blank">
+                  <h1><i class="fa fa-file-pdf-o"></i></h1>
+                  <p>Procedure Protocol for Laser Coagulation of Anal Fistula (LCAF)</p>
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4 col-sm-4">
+                <a href="files/PROTOCOLS/Laser Coagulation of Pilonidal Sinus (LCP).pdf" target="_blank">
+                  <h1><i class="fa fa-file-pdf-o"></i></h1>
+                  <p>Procedure Protocol for Laser Coagulation of Pilonidal Sinus (LCP)</p>
+                </a>
+              </div>
+              <div class="col-xs-4 col-sm-4">
+                <a href="files/PROTOCOLS/Laser Sclerotherapy of Hemorrhoids (LSH).pdf" target="_blank">
+                  <h1><i class="fa fa-file-pdf-o"></i></i></h1>
+                  <p>Procedure Protocol for Laser Sclerotherapy of Hemorrhoids (LSH)</p>
+                </a>
+              </div>
+              <div class="col-xs-4 col-sm-4">
+                <a href="files/PROTOCOLS/Percutaneous Laser Disc Decompression (PLDD).pdf" target="_blank">
+                  <h1><i class="fa fa-file-pdf-o"></i></h1>
+                  <p>Procedure Protocol for Percutaneous Laser Disc Decompression (PLDD).pdf</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <h2 id="articles" class="sub-header">Related Articles</h2>
+          <div class="table-responsive">
+            <table id="artable" class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Treatment</th>
+                  <th>Title</th>
+                  <th>Authors</th>
+                  <th>Date</th>
+                  <th>Download</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ENT</td>
+                  <td>Intraindividual Comparison of 1,470 nm Diode Laser versus Carbon Dioxide Laser for Tonsillotomy: A Prospective, Randomized, Double Blind, Controlled Feasibility Trial</td>
+                  <td>Miriam Havel MD, Ronald Sroka PhD, Elsa Englert MD, Klaus Stelter MD, Andreas Leunig MD, Christian S. Betz MD</td>
+                  <td>2012</td>
+                  <td class="text-center"><a href="files/ENT/[11] 1470 for ENT.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>ENT</td>
+                  <td>A Double-Blind, Randomized, Intra-Individual Controlled Feasibility Trial Comparing the Use of 1,470 and 940 nm Diode Laser for the Treatment of Hyperplastic Inferior Nasal Turbinates</td>
+                  <td>Miriam Havel MD, Ronald Sroka PhD, Andreas Leunig MD, Parag Patel MD, Christian S. Betz MD</td>
+                  <td>Unknown</td>
+                  <td class="text-center"><a href="files/ENT/[12] 1470 for ENT.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>ENT</td>
+                  <td>Pilot study on the diode laser in stapes surgery</td>
+                  <td>María Luisa Navarrete, Rafael Boemo, Mohamed Darwish, Jesús Monzón, Pedro Rojas</td>
+                  <td>2009</td>
+                  <td class="text-center"><a href="files/ENT/102v61n06a13184432pdf001_2.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>ENT</td>
+                  <td>Diode laser in the treatment of epistaxis in patients with hereditary haemorrhagic telangiectasia</td>
+                  <td>M.L. Fiorella, L. Lillo, R. Fiorella</td>
+                  <td>2012</td>
+                  <td class="text-center"><a href="files/ENT/0392-100X-32-164.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>ENT</td>
+                  <td>Diode laser treatment of hypertrophic inferior turbinates and evaluation of the results with acoustic rhinometry</td>
+                  <td>Hamdi Cakli, Cemal Cingi, Emine Güven, Melek Kezban Gurbuz, Ercan Kaya</td>
+                  <td>2012</td>
+                  <td class="text-center"><a href="files/ENT/Diode laser for turbinate surgery.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>ENT</td>
+                  <td>Influence of Laser-Assisted Cochleostomy on Acoustically Evoked Compound Action Potentials in the Guinea Pig</td>
+                  <td>Digna M. A. Kamalski, Jeroen P. M. Peters, Tjeerd de Boorder, Sjaak F. L. Klis, Wilko Grolman</td>
+                  <td>2014</td>
+                  <td class="text-center"><a href="files/ENT/Grolman guinea pig model comparison of co2 980 thulium and ktp.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>ENT</td>
+                  <td>Capturing Thermal, Mechanical, and Acoustic Effects of the Diode (980 nm) Laser in Stapedotomy</td>
+                  <td>Digna M. A. Kamalski, Tjeerd de Boorder, Arnold J. N. Bittermann, Inge Wegner, Robert Vincent, Wilko Grolman</td>
+                  <td>2014</td>
+                  <td class="text-center"><a href="files/ENT/Grolman laser performance for 980.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>ENT</td>
+                  <td>Microdrill, Diode Laser, and Manual Microsurgical Stapedoplasty: A Comparative Study</td>
+                  <td>Priit Kasenõmm, Maris Suurna</td>
+                  <td>2014</td>
+                  <td class="text-center"><a href="files/ENT/IJOHNS_2014010913585213.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>ENT</td>
+                  <td>Diode laser versus radiofrequency treatment of the inferior turbinate – a randomized clinical trial</td>
+                  <td>U. Kisser, K. Stelter, R. Gürkov, M. Patscheider, F. Schrötzlmair, R. Bytyci, C. Adderson-Kisser, A. Berghaus, B. Olzowy</td>
+                  <td>2014</td>
+                  <td class="text-center"><a href="files/ENT/turbinate treatment with diode laser.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>PLDD</td>
+                  <td>Comparative Prospective Randomized Study Comparing Conservative Treatment and Percutaneous Disk Decompression for Treatment of Intervertebral Disk Herniation</td>
+                  <td>Dimitrios Erginousakis, MD, Dimitrios K. Filippiadis, MD, Aikaterini Malagari, Athanasios Kostakos, MD, Elias Brountzos, Nikolaos L. Kelekis, Alexis Kelekis</td>
+                  <td>2011</td>
+                  <td class="text-center"><a href="files/PLDD/PDD-vs-Conservative-Treatment.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>PLDD</td>
+                  <td>Treatment of Herniated Lumbar Disk with PLDD Procedure</td>
+                  <td>M. Costaglioli., P. Sannais</td>
+                  <td>Unknown</td>
+                  <td class="text-center"><a href="files/PLDD/PLDD-Course-2015-Cagliari.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>PLDD</td>
+                  <td>Comparison of Results of 500 Microdiscectomies and 500 Percutaneous Laser Disc Decompression Procedures for Lumbar Disc Herniation</td>
+                  <td>Gian Paolo Tassi, MD</td>
+                  <td>2006</td>
+                  <td class="text-center"><a href="files/PLDD/PLDD-Publication-1.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>PLDD</td>
+                  <td>Percutaneous Treatment of Intervertebral Disc Herniation</td>
+                  <td>Xavier Buy MD, Afshin Gangi MD, PhD</td>
+                  <td>Unknown</td>
+                  <td class="text-center"><a href="files/PLDD/PLDD-Publication-2.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>PLDD</td>
+                  <td>Percutaneous Laser Disk Decompression: A Review of the Literature</td>
+                  <td>B. Schenk, P.A. Brouwer, W.C. Peul, M.A. van Buchem</td>
+                  <td>2006</td>
+                  <td class="text-center"><a href="files/PLDD/PLDD-Publication-3.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>PLDD</td>
+                  <td>Percutaneous Laser Disk Decompression for the Treatment of Lumbar Disc Herniation: A Review</td>
+                  <td>Philippe Goupille MD, Denis Mulleman MD, Saloua Mammou MD, Isabelle Griffoul MD, Jean-Pierre Valat MD</td>
+                  <td>2007</td>
+                  <td class="text-center"><a href="files/PLDD/PLDD-Publication-4.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>PLDD</td>
+                  <td>Percutaneous Laser Disc Decompression versus Conventional Microdiscectomy in Sciatica: A Randomized Controlled Trial</td>
+                  <td>Patrick A. Brouwer MD MSc, Ronald Brand PhD, M. Elske van den Akker-van Marle PhD, Wilco C.H. Jacobs PhD, Barry Schenk MD, Annette A. van den Berg-Huijsmans MSc, Bart W. Koes PhD, M.A. van Buchem MD PhD, Mark P. Arts MD PhD, Wilco C. Peul MD PhD</td>
+                  <td>2015</td>
+                  <td class="text-center"><a href="files/PLDD/PLDD-Vs-Surgery-RCT-design.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>PLDD</td>
+                  <td>Effectiveness of Percutaneous Laser Disc Decompression versus Conventional Open Discectomy in the Treatment of Lumbar Disc Herniation; Design of a Prospective Randomized Controlled Trial</td>
+                  <td>Patrick A. Brouwer, Wilco C. Peul, Ronald Brand, Mark P. Arts, Bart W. Koes, Annette A. van den Berg, Mark A. van Buchem</td>
+                  <td>2009</td>
+                  <td class="text-center"><a href="files/PLDD/PLDD-Vs-Surgery-RCT.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>PLDD</td>
+                  <td>PLDD: Surgery Technique</td>
+                  <td>P. Sannais, M. Costaglioli</td>
+                  <td>Unknown</td>
+                  <td class="text-center"><a href="files/PLDD/Surgical-technique-PLDD-Cagliari-2015.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Proctology</td>
+                  <td>A new technique for sphincter-preserving anal fistula repair using a novel radial emitting laser probe</td>
+                  <td>A. Wilhelm</td>
+                  <td>2011</td>
+                  <td class="text-center"><a href="files/PROCTO/1 A new technique for sphincter-preserving anal fistula repair using a novel radial emitting laser probe.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Proctology</td>
+                  <td>Diode laser for treatment of symptomatic hemorrhoid: a short term clinical result of a mini invasive treatment, and one year follow up</td>
+                  <td>Abdolhadi Jahanshahi, Esmail Mashhadizadeh, Mohammad‐Hossein Sarmast</td>
+                  <td>2012</td>
+                  <td class="text-center"><a href="files/PROCTO/1 Diode laser for treatment of symptomatic hemorrhoida .pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Proctology</td>
+                  <td>Closure of fistula-in-ano with laser – FiLaC TM: an effective novel sphincter-saving procedure for complex disease</td>
+                  <td>P. Giamundo, M. Geraci, L. Tibaldi, M. Valente</td>
+                  <td>2013</td>
+                  <td><a href="files/PROCTO/2 Closure of fistula-in-ano with laser – FiLaCTM.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Proctology</td>
+                  <td>Hemorrhoidal laser procedure: short- and long-term results from a prospective study</td>
+                  <td>Nicola Crea, M.D., Giacomo Pata, M.D., Mauro Lippa, M.D., Deborah Chiesa, M.D., Maria Elena Gregorini, M.D., Paolo Gandolfi, M.D.</td>
+                  <td>2013</td>
+                  <td class="text-center"><a href="files/PROCTO/2 Hemorrhoidal laser procedure - short and long term results from a prospective study.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Proctology</td>
+                  <td>Fistula-tract Laser Closure (FiLaC TM): long-term results and new operative strategies</td>
+                  <td>P. Giamundo, L. Esercizio, M. Geraci, L. Tibaldi, M. Valente</td>
+                  <td>2015</td>
+                  <td class="text-center"><a href="files/PROCTO/3 FiLaC - long term results.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Proctology</td>
+                  <td>A New Method For Hemorrhoid Surgery: Intrahemorrhoidal Diode Laser, Does It Work?</td>
+                  <td>Hélio Plapler, Raduan Hage, Janaina Duarte, Nilza Lopes, Igor Masson, Cláudio Cazarini, Thiago Fukuda</td>
+                  <td>2009</td>
+                  <td class="text-center"><a href="files/PROCTO/3 Intrahemorrhoidal Diode Laser Does It Work.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Proctology</td>
+                  <td>Laser ablation of fistula tract: a sphincter-­preserving method for treating fistula-­in-­ano.</td>
+                  <td>Oztürk E., Gülcü B</td>
+                  <td>2014</td>
+                  <td class="text-center"><a href="files/PROCTO/4 Laser ablation of fistula tract_ a sphincter-preserving method for treating fistula-in-ano.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Proctology</td>
+                  <td>Laser Hemorrhoidoplasty Procedure vs Open Surgical Hemorrhoidectomy: a Trial Comparing Treatments for Hemorrhoids of Third and Fourth Degree</td>
+                  <td>Halit Maloku, Zaim Gashi, Ranko Lazovic, Hilmi Islami, Argjira Juniku-Shkololli</td>
+                  <td>2014</td>
+                  <td class="text-center"><a href="files/PROCTO/4 Laser Hemorrhoidoplasty Procedure vs Open Surgical Hemorrhoidectomy.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Proctology</td>
+                  <td>Berlin Workshop - Laser in Proctology</td>
+                  <td>Zentrum für Laserchirurgie in der Proktologie</td>
+                  <td>Unknown</td>
+                  <td class="text-center"><a href="files/PROCTO/Laser Workshop Clinics (1).pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Proctology</td>
+                  <td>Proctology - Basic Laser Theory</td>
+                  <td>Gil Shapira, CEO Neolaser</td>
+                  <td>2016</td>
+                  <td class="text-center"><a href="files/PROCTO/neoLaser Proctology Course July 2016.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Proctology</td>
+                  <td>Laser Coagulation of Anal Fistula (LCAF)</td>
+                  <td>Zentrum für Laserchirurgie in der Proktologie</td>
+                  <td>Unknown</td>
+                  <td class="text-center"><a href="files/PROCTO/Protocol Anal Fistula.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Proctology</td>
+                  <td>Laser Sclerotherapy of Hemorrhoids (LSH)</td>
+                  <td>Zentrum für Laserchirurgie in der Proktologie</td>
+                  <td>Unknown</td>
+                  <td class="text-center"><a href="files/PROCTO/Protocol Hemorrhoids.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Proctology</td>
+                  <td>Laser Coagulation of Pilonidal Sinus (LCP)</td>
+                  <td>Zentrum für Laserchirurgie in der Proktologie</td>
+                  <td>Unknown</td>
+                  <td class="text-center"><a href="files/PROCTO/Protocol Pilonidal Sinus.pdf" download><i class="fa fa-download"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h2 id="videos" class="sub-header">Videos</h2>
+          <br><br>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <h4 class="text-center"><strong>Stapedotomy Otology Surgery with neoV Laser</strong></h4>
+              <hr>
+              <div class="col-xs-12 col-sm-6">
+                <div class="iframe-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/kwr4oUuwAgs" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <p style="margin-top:12px;"><a href="https://youtu.be/kwr4oUuwAgs" target="_blank"><i class="fa fa-youtube fa-3x"></a></i>
+                </p>
+                <p><strong>Uploaded on Oct 11, 2016</strong></p>
+                <p><strong>Channel: </strong>Gil Shapira</p>
+                <p><strong>Description: </strong>
+                  Primary Stapedotomy surgery with the neoV980 laser, at the Causse Clinic, by Dr. Robert Vincent.</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <h4 class="text-center"><strong>980nm Diode neoLaser Turbinate Reduction</strong></h4>
+              <hr>
+              <div class="col-xs-12 col-sm-6">
+                <div class="iframe-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/EGSkBBpMx04" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <p style="margin-top:12px;"><a href="https://youtu.be/EGSkBBpMx04" target="_blank"><i class="fa fa-youtube fa-3x"></a></i>
+                </p>
+                <p><strong>Uploaded on Oct 12, 2016</strong></p>
+                <p><strong>Channel: </strong>Gil Shapira</p>
+                <p><strong>Description: </strong>
+                  Turbinate reduction using the neoV980 diode laser.</p>
+              </div>
+            </div>
+          </div>
+          <br><br><br><br>
+          <div class="row">
+            <h4 class="text-center"><strong>EVLA Treatment with neoV 1470</strong></h4>
+            <hr>
+            <div class="col-xs-12 col-sm-6">
+              <div class="iframe-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3PUFaoPGQI4" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <p style="margin-top:12px;"><a href="https://youtu.be/3PUFaoPGQI4" target="_blank"><i class="fa fa-youtube fa-3x"></a></i>
+              </p>
+              <p><strong>Uploaded on Oct 11, 2016</strong></p>
+              <p><strong>Channel: </strong>Gil Shapira</p>
+              <p><strong>Description: </strong>
+                Endovascular treatment of varicose veins with a 1470nm laser system, the neoV1470, and the CORONA 360 fiber</p>
+            </div>
+          </div>
+          <br><br><br><br>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <h4 class="text-center"><strong>Anal Fistula Laser Treatment with neoV Laser</strong></h4>
+              <hr>
+              <div class="col-xs-12 col-sm-6">
+                <div class="iframe-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/wKLo_DqjmoE" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <p style="margin-top:12px;"><a href="https://youtu.be/wKLo_DqjmoE" target="_blank"><i class="fa fa-youtube fa-3x"></a></i>
+                </p>
+                <p><strong>Uploaded on Oct 12, 2016</strong></p>
+                <p><strong>Channel: </strong>Gil Shapira</p>
+                <p><strong>Description: </strong>
+                  Treatment of anal fistula lesion with neoV1470 laser at 1470 using the CORONA Fistula Probe</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <h4 class="text-center"><strong>Hemorrhoid Laser Treatment with neoV </strong></h4>
+              <hr>
+              <div class="col-xs-12 col-sm-6">
+                <div class="iframe-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/O12WDWCo9bg" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <p style="margin-top:12px;"><a href="https://youtu.be/O12WDWCo9bg" target="_blank"><i class="fa fa-youtube fa-3x"></a></i>
+                </p>
+                <p><strong>Uploaded on Oct 12, 2016</strong></p>
+                <p><strong>Channel: </strong>Gil Shapira</p>
+                <p><strong>Description: </strong>
+                  Treatment of hemorrhoid lesion with prolapse with the neoV1470 laser at 1470nm and with CORONA Hemorrhoid Probe</p>
+              </div>
+            </div>
+          </div>
+          <br><br><br><br>
+          <div class="row">
+            <h4 class="text-center"><strong>neoV Laser PLDD Treatment</strong></h4>
+            <hr>
+            <div class="col-xs-12 col-sm-6">
+              <div class="iframe-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Lv1BcTLq0is" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <p style="margin-top:12px;"><a href="https://youtu.be/Lv1BcTLq0is" target="_blank"><i class="fa fa-youtube fa-3x"></a></i>
+              </p>
+              <p><strong>Uploaded on Oct 12, 2016</strong></p>
+              <p><strong>Channel: </strong>Gil Shapira</p>
+              <p><strong>Description: </strong>
+                Treatment of herniated disc with PLDD kit and neoV laser unit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- DataTables -->
+    <script type="text/javascript" src="http://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          $('#artable').dataTable();
+      });
+    </script>
+    <script>
+      $('#sideNav li').on('click', function() {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+      });
+    </script>
+  </body>
+</html>
