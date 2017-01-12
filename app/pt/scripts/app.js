@@ -142,15 +142,6 @@ angular.module('neoApp_pt-br', ['ui.router', 'angular.backtop'])
     }
   })
 
-  .state('app.signin', {
-    url:'sign-in',
-    views: {
-      'content@': {
-        templateUrl: 'app/en/partials/signin.html'
-      }
-    }
-  })
-
   $urlRouterProvider.otherwise('/pt-br/');
 })
 
