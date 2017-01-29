@@ -113,7 +113,13 @@ a:hover, a:focus {
                 navigation
 
 **/
-
+.navbar-header {
+  display: flex;
+}
+.navbar-header ul {
+  height:auto;
+  align-self: center;
+}
 .navbar-brand, .navbar-brand h1 {
   float:none;
   margin-top:0;
