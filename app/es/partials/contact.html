@@ -1,0 +1,95 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a ui-sref="app">Inicio</a></li>
+  <li class="breadcrumb-item active">Contáctanos</li>
+</ol>
+<div id="contactWrapper" class="container-fluid sliderYp slide-page">
+  <div class="row row-content" style="margin-top:64px;">
+    <div class="col-xs-12 col-sm-5 col-sm-offset-1">
+      <form id="form-contato" action="https://formspree.io/contato@neolaserlatam.com" method="POST" class="form-horizontal" role="form">
+        <div class="form-group">
+          <label for="firstName" class="col-xs-12 col-sm-3 control-label">
+            Nombre*
+          </label>
+          <div class="col-xs-12 col-sm-8">
+            <input type="text" id="firstName" name="First Name" placeholder="Your First Name" class="form-control" required="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="lastName" class="col-xs-12 col-sm-3 control-label">
+            Apellido*
+          </label>
+          <div class="col-xs-12 col-sm-8">
+            <input type="text" id="lastName" name="Last Name" placeholder="Your Last Name" class="form-control" required="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="col-xs-12 col-sm-3 control-label">
+            Correo electrónico*
+          </label>
+          <div class="col-xs-12 col-sm-8">
+            <input type="email" id="email" name="_replyto" placeholder="username@email.com" class="form-control" required="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="tel" class="col-xs-12 col-sm-3 control-label">
+            Teléfono
+          </label>
+          <div class="col-xs-12 col-sm-8">
+            <input type="tel" id="tel" name="Phone #" placeholder="(555) 555-5555" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject" class="col-xs-12 col-sm-3 control-label">
+            Tema
+          </label>
+          <div class="col-xs-12 col-sm-8">
+            <input id="assunto" type="text" name="Subject" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message" class="col-xs-12 col-sm-3 control-label">
+            Mensaje
+          </label>
+          <div class="col-xs-12 col-sm-8">
+            <textarea name="Message" class="form-control" required="" rows="6"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12 col-sm-2 col-sm-offset-9">
+            <button type="submit" class="btn btn-default">Enviar</button>
+          </div>
+        </div>
+        <input type="hidden" name="_next" value=""/>
+        <input type="hidden" name="_subject" value="[Nueva mensaje] Neolaserlatam.com"/>
+        <input type="hidden" name="_format" value="plain" />
+        <input type="text" name="_gotcha" style="display:none" />
+      </form>
+    </div>
+    <div class="col-xs-12 col-sm-5 col-sm-offset-1">
+      <p>
+        <i class="fa fa-phone"></i>
+        <strong>Teléfono: </strong>
+        +55 21 2289-1210
+      </p>
+      <hr>
+      <p>
+        <i class="fa fa-envelope"></i>
+        <strong>Correo electrónico: </strong>
+        contato@neolaserlatam.com
+      </p>
+      <hr>
+      <p>
+        <strong>Dónde Estamos</strong>
+      </p>
+      <address>
+        Av. João Cabral de Mello Neto, 850, sl. 222<br>
+        Barra da Tijuca, Rio de Janeiro &ndash; RJ, Brazil
+      </address>
+      <div class="iframe-container">
+        <iframe frameborder="0" style="border:0; height:200px; width:320px;"  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCpL_11iHyHj4Bn2vgZERH8qor6VBmgT6s&q=Av.+Paisagista+Jose+Silva+de+Azevedo+Neto,+850+-+222+-+Barra+da+Tijuca,+Rio+de+Janeiro+-+RJ" allowfullscreen>
+        </iframe>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
