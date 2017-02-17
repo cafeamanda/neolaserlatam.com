@@ -1,14 +1,35 @@
 <div id="homeWrapper">
   <div class="jumbotron">
-    <div class="navbar">
-      <div class="col-xs-12 col-lg-4">
-        <p style="padding:30px;"></p>
-        <h1>SISTEMAS<br>DE CIRURGIA<br>A LASER</h1>
-        <p>Nós oferecemos qualidade top de linha e design de alto nível, fornecendo excelência em performance e funcionalidade, flexibilidade e modularidade, tudo a um preço acessível.</p>
+    <div id="inicioCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div id="firstSlide" class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12 col-sm-8 col-sm-offset-1">
+                <h1>SEJA UM<br>DISTRIBUIDOR</h1>
+                <p>Seja um distribuidor autorizado e represente os produtos da Neolaser na América Latina.</p>
+                <a type="button" class="btn btn-lg btn-success" ui-sref="app.distributors">Clique Aqui</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div id="secondSlide" class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12 col-sm-5">
+                <h1>SISTEMAS DE CIRURGIA A LASER</h1>
+                <p>Nós oferecemos qualidade top de linha e design de alto nível, fornecendo excelência em performance e funcionalidade, flexibilidade e modularidade, tudo a um preço acessível.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-xs-12 col-lg-8">
-        <img src="images/laser-nobg.png" class="img-responsive pull-right">
-      </div>
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#inicioCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#inicioCarousel" data-slide-to="1"></li>
+      </ol>
     </div>
   </div>
   <div class="container">
