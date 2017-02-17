@@ -57,6 +57,15 @@ angular.module('neoApp_es-mx', ['ui.router', 'angular.backtop'])
     }
   })
 
+  .state('app.distributors', {
+    url:'conviertase-en-un-distribuidor',
+    views: {
+      'content@': {
+        templateUrl: 'app/es/partials/distributor.html',
+      }
+    }
+  })
+
   .state('app.products', {
     url:'nuestros-productos',
     views: {

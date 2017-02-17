@@ -15,6 +15,51 @@ a:hover, a:focus {
   color:#04aa34;
   opacity: 0.5;
 }
+#inicioCarousel {
+  border: 1px solid #fafafa;
+}
+#inicioCarousel .carousel-indicators li {
+  background-color: transparent;
+  border: 1px solid #bbb;
+}
+#inicioCarousel .carousel-indicators .active {
+  background-color: #bbb;
+}
+#inicioCarousel,
+#firstSlide,
+#secondSlide {
+  height: 60vh;
+}
+#firstSlide {
+  background-image:url('../images/neoV02.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  display:flex;
+}
+#firstSlide .row {
+  align-self: center;
+}
+#secondSlide {
+  background-image:url('../images/laser-nobg.png');
+  background-repeat: no-repeat;
+  display: flex;
+}
+#secondSlide .row {
+  align-self: center;
+}
+#secondSlide h2 {
+  font-family: 'Lato', sans-serif;
+}
+.active,
+.carousel-inner,
+.item {
+  height: 100%;
+}
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .vcenter {
   display:flex;
   align-items: center;
@@ -79,8 +124,8 @@ a:hover, a:focus {
 .img-wrapper {
   height: 125px;
   width:125px;
-  /*border-radius: 50%;*/
-  background: #ddd;
+  border-radius: 6px;
+  /*background: #ddd;*/
   display:block;
   margin-left:auto;
   margin-right:auto;
@@ -88,7 +133,11 @@ a:hover, a:focus {
 }
 .img-wrapper img {
   max-height: 125px;
-  float:right;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 16px;
+  /*float:right;*/
 }
 .show-more {
   background-image:linear-gradient(to bottom,#fff 0,#ccc 100%) !important;

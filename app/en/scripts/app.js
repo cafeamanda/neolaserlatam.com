@@ -57,6 +57,15 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
     }
   })
 
+  .state('app.distributors', {
+    url:'become-a-distributor',
+    views: {
+      'content@': {
+        templateUrl: 'app/en/partials/distributor.html'
+      }
+    }
+  })
+
   .state('app.products', {
     url:'our-products',
     views: {
