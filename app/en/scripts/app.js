@@ -7,13 +7,13 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
 
   // Main
   .state('app', {
-    url: '/en-us/',
+    url: '/en/',
     views: {
       'header': {
         templateUrl: 'app/en/templates/header.html'
       },
       'content': {
-        templateUrl:'app/en/partials/home.html',
+        templateUrl:'app/en/partials/home.html'
       },
       'footer': {
         templateUrl: 'app/en/templates/footer.html'
@@ -116,7 +116,7 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
     views: {
       'content@': {
         templateUrl: 'app/en/partials/PLDD.html',
-        controller: 'PLDDCtrl'
+        controller: 'ArticlesCtrl'
       }
     }
   })
@@ -126,7 +126,7 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
     views: {
       'content@': {
         templateUrl: 'app/en/partials/proctology.html',
-        controller: 'ProctoCtrl'
+        controller: 'ArticlesCtrl'
       }
     }
   })
@@ -136,7 +136,7 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
     views: {
       'content@': {
         templateUrl: 'app/en/partials/ENT.html',
-        controller: 'ENTCtrl'
+        controller: 'ArticlesCtrl'
       }
     }
   })
@@ -151,7 +151,7 @@ angular.module('neoApp_en-us', ['ui.router', 'angular.backtop'])
     }
   })
 
-  $urlRouterProvider.otherwise('/en-us/');
+  $urlRouterProvider.otherwise('/en/');
 })
 
 .run(function($rootScope){
