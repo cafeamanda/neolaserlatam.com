@@ -26,28 +26,29 @@ a:hover, a:focus {
   background-color: #bbb;
 }
 #inicioCarousel,
-#firstSlide,
-#secondSlide {
+#inicioCarousel .item .container-fluid {
   height: 60vh;
 }
-#firstSlide {
+#inicioCarousel .item .container-fluid .row {
+  align-self: center;
+}
+#eventSlide {
+  display:flex;
+  background-color: #131313;
+  color:white;
+}
+#distribSlide {
   background-image:url('../images/neoV02.png');
   background-position: right;
   background-repeat: no-repeat;
   display:flex;
 }
-#firstSlide .row {
-  align-self: center;
-}
-#secondSlide {
+#coverSlide {
   background-image:url('../images/laser-nobg.png');
   background-repeat: no-repeat;
   display: flex;
 }
-#secondSlide .row {
-  align-self: center;
-}
-#secondSlide h2 {
+#coverSlide h2 {
   font-family: 'Lato', sans-serif;
 }
 .active,
@@ -547,10 +548,18 @@ a:hover, a:focus {
 
 */
 
-#eventsWrapper .jumbotron {
-  margin-top:48px;
+#eventsWrapper {
   margin-bottom:48px;
   background:transparent;
+}
+.img-trigger {
+  box-shadow: 8px 8px 1px #eee;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.img-trigger:hover {
+  opacity: 0.5;
 }
 /*
 
@@ -893,6 +902,17 @@ footer .btn-simple p:hover {
 @media (max-width:499px) {
   .treatmentWrapper .col-1st h1 {
     font-size:30px !important;
+  }
+  #eventSlide h1 {
+    font-size: 16px;
+    text-align: center;
+  }
+  #eventSlide p {
+    font-size: 11px !important;
+    text-align: center;
+  }
+  .col-xs-3 {
+    width:100%;
   }
 }
 @media (max-width:395px) {

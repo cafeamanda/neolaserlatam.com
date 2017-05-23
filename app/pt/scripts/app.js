@@ -7,7 +7,7 @@ angular.module('neoApp_pt-br', ['ui.router', 'angular.backtop'])
 
   // Main
   .state('app', {
-    url: '/pt-br/',
+    url: '/pt/',
     views: {
       'header': {
         templateUrl: 'app/pt/templates/header.html'
@@ -151,7 +151,7 @@ angular.module('neoApp_pt-br', ['ui.router', 'angular.backtop'])
     }
   })
 
-  $urlRouterProvider.otherwise('/pt-br/');
+  $urlRouterProvider.otherwise('/pt/');
 })
 
 .run(function($rootScope){

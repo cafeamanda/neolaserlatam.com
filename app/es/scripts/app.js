@@ -7,7 +7,7 @@ angular.module('neoApp_es-mx', ['ui.router', 'angular.backtop'])
 
   // Main
   .state('app', {
-    url: '/es-mx/',
+    url: '/es/',
     views: {
       'header': {
         templateUrl: 'app/es/templates/header.html'
@@ -151,7 +151,7 @@ angular.module('neoApp_es-mx', ['ui.router', 'angular.backtop'])
     }
   })
 
-  $urlRouterProvider.otherwise('/es-mx/');
+  $urlRouterProvider.otherwise('/es/');
 })
 
 .run(function($rootScope){

@@ -2,9 +2,9 @@
 
 angular.module('neoApp_en-us')
 
-  .factory('proctoFactory', function() {
+  .factory('filesFactory', function() {
 
-    var proctofac = {};
+    var filesfac = {};
 
     var proctofiles=[
       {
@@ -87,20 +87,6 @@ angular.module('neoApp_en-us')
       }
     ]
 
-    proctofac.getFiles = function() {
-      return proctofiles;
-    };
-    proctofac.getFile = function() {
-      return proctofiles[index];
-    };
-    return proctofac;
-
-  })
-
-  .factory('plddFactory', function() {
-
-    var plddfac = {};
-
     var plddfiles=[
       {
         path:'files/PLDD/PDD-vs-Conservative-Treatment.pdf',
@@ -157,19 +143,6 @@ angular.module('neoApp_en-us')
         date:'Unknown'
       }
     ]
-
-    plddfac.getFiles = function() {
-      return plddfiles;
-    };
-    plddfac.getFile = function() {
-      return plddfiles[index];
-    };
-    return plddfac;
-  })
-
-  .factory('entFactory', function() {
-
-    var entfac = {};
 
     var entfiles=[
       {
@@ -228,11 +201,18 @@ angular.module('neoApp_en-us')
       }
     ]
 
-    entfac.getFiles = function() {
+    filesfac.getProctoFiles = function() {
+      return proctofiles;
+    }
+
+    filesfac.getPlddFiles = function() {
+      return plddfiles;
+    }
+
+    filesfac.getEntFiles = function() {
       return entfiles;
-    };
-    entfac.getFile = function() {
-      return entfiles[index];
-    };
-    return entfac;
+    }
+
+    return filesfac;
+
   });
