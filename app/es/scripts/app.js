@@ -116,7 +116,7 @@ angular.module('neoApp_es-mx', ['ui.router', 'angular.backtop'])
     views: {
       'content@': {
         templateUrl: 'app/es/partials/PLDD.html',
-        controller: 'PLDDCtrl'
+        controller: 'ArticlesCtrl'
       }
     }
   })
@@ -126,7 +126,7 @@ angular.module('neoApp_es-mx', ['ui.router', 'angular.backtop'])
     views: {
       'content@': {
         templateUrl: 'app/es/partials/proctology.html',
-        controller: 'ProctoCtrl'
+        controller: 'ArticlesCtrl'
       }
     }
   })
@@ -136,7 +136,7 @@ angular.module('neoApp_es-mx', ['ui.router', 'angular.backtop'])
     views: {
       'content@': {
         templateUrl: 'app/es/partials/ENT.html',
-        controller: 'ENTCtrl'
+        controller: 'ArticlesCtrl'
       }
     }
   })
