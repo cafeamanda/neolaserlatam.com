@@ -11,7 +11,7 @@
   </div>
 </div>
 
-<div id="sideNav" class="sidenav dnone">
+<aside id="sideNav" class="sidenav dnone">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <ul class="list-unstyled">
     <li><a ui-sref="app">Home</a></li>
@@ -37,9 +37,9 @@
     </ul>
     <li><a ui-sref="app.events">Events</a></li>
     <li><a ui-sref="app.contact">Contact</a></li>
-    <li><a href="http://client.neolaserlatam.com">Log in</a></li>
+    <li><a href="login.html">Log in</a></li>
   </ul>
-</div>
+</aside>
 
 <!-- 1st navbar -->
 <nav id="uppernavbar" class="navbar navbar-inverse navbar-static-top" role="navigation">
@@ -64,7 +64,21 @@
         <li><a ui-sref="app.salesrep">SALES REP</a></li>
         <li><a ui-sref="app.events">EVENTS</a></li>
         <li><a ui-sref="app.contact">CONTACT</a></li>
-        <li><a href="http://client.neolaserlatam.com">SIGN IN</a></li>
+        <li><a href="login.html">SIGN IN</a></li>
+        <!-- <li id="triggeredForm">
+          <form class="form-inline" id="loginForm" name="loginForm">
+            <div class="form-group">
+              <input id="username" name="usernameInput" type="text" ng-model="username" class="form-control" placeholder="username" required>
+            </div>
+            <div class="form-group">
+              <input id="password" name="passwordInput" type="password" ng-model="password" class="form-control" placeholder="password" required>
+            </div>
+            <div class="form-group">
+              <button id="submit" type="submit" class="btn btn-success btn-xs form-control">Login</button>
+            </div>
+          </form>
+          <span id="msg">* Username and password don't match.</span>
+        </li> -->
       </ul>
     </div>
     </div>
