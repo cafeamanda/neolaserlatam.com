@@ -1,3 +1,4 @@
+<!-- SELECT LANGUAGE -->
 <div id="langDiv">
   <div class="container-fluid">
     <ul class="nav navbar-nav pull-right list-unstyled"><li>
@@ -11,6 +12,7 @@
   </div>
 </div>
 
+<!-- MOBILE MENU -->
 <aside id="sideNav" class="sidenav dnone">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <ul class="list-unstyled">
@@ -41,7 +43,7 @@
   </ul>
 </aside>
 
-<!-- 1st navbar -->
+<!-- DESKTOP FIRST NAVBAR -->
 <nav id="uppernavbar" class="navbar navbar-inverse navbar-static-top" role="navigation">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed mnone" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -65,52 +67,40 @@
         <li><a ui-sref="app.events">EVENTS</a></li>
         <li><a ui-sref="app.contact">CONTACT</a></li>
         <li><a href="login.html">SIGN IN</a></li>
-        <!-- <li id="triggeredForm">
-          <form class="form-inline" id="loginForm" name="loginForm">
-            <div class="form-group">
-              <input id="username" name="usernameInput" type="text" ng-model="username" class="form-control" placeholder="username" required>
-            </div>
-            <div class="form-group">
-              <input id="password" name="passwordInput" type="password" ng-model="password" class="form-control" placeholder="password" required>
-            </div>
-            <div class="form-group">
-              <button id="submit" type="submit" class="btn btn-success btn-xs form-control">Login</button>
-            </div>
-          </form>
-          <span id="msg">* Username and password don't match.</span>
-        </li> -->
       </ul>
     </div>
     </div>
-</nav><!-- 1st navbar -->
+</nav>
 
-<!-- 2nd navbar -->
+<!-- DESKTOP SECOND NAVBAR -->
 <nav id="lowernavbar" class="navbar navbar-inverse navbar-static-top mnone" role="navigation">
-  <div class="navbar-collapse collapse">
-    <ul id="lowernavbarlist" class="nav navbar-nav">
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a ui-sref="app.neoV980">NEOV 980</a></li>
-          <li><a ui-sref="app.neoV1470">NEOV 1470</a></li>
-          <li class="divider"></li>
-          <li><a ui-sref="app.salesrep">SALES REPRESENTATIVES</a></li>
+    <div class="navbar-collapse collapse">
+        <ul id="lowernavbarlist" class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a ui-sref="app.neoV980">NEOV 980</a></li>
+                    <li><a ui-sref="app.neoV1470">NEOV 1470</a></li>
+                    <li class="divider"></li>
+                    <li><a ui-sref="app.salesrep">SALES REPRESENTATIVES</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TREATMENTS <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a ui-sref="app.ENT">ENT</a></li>
+                    <li><a ui-sref="app.EVLA">ENDOVASCULAR APPLICATIONS</a></li>
+                    <li><a ui-sref="app.PLDD">PLDD</a></li>
+                    <li><a ui-sref="app.proctology">PROCTOLOGY</a></li>
+                    <li class="divider"></li>
+                    <li><a ui-sref="app.articles">RELATED ARTICLES</a></li>
+                </ul>
+            </li>
         </ul>
-      </li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TREATMENTS <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a ui-sref="app.ENT">ENT</a></li>
-          <li><a ui-sref="app.EVLA">ENDOVASCULAR APPLICATIONS</a></li>
-          <li><a ui-sref="app.PLDD">PLDD</a></li>
-          <li><a ui-sref="app.proctology">PROCTOLOGY</a></li>
-          <li class="divider"></li>
-          <li><a ui-sref="app.articles">RELATED ARTICLES</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</nav><!-- fim da barra de navegação -->
+    </div>
+</nav>
+
+<!-- MOBILE MENU TRIGGER BUTTON -->
 <a role="button" id="sideNavButton" class="dnone" onclick="openNav()">
   <i class="fa fa-bars fa-2x"></i>
 </a>

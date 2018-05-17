@@ -331,7 +331,11 @@ a:hover, a:focus {
   font-weight: bold;
 }
 
-#lowernavbar .navbar-nav > li > a:hover, #lowernavbar .navbar-nav > li > a:focus, #lowernavbar .navbar-nav > .active, #lowernavbar .navbar-nav > .open > a, #lowernavbar .navbar-nav > .open > a:hover {
+#lowernavbar .navbar-nav > li > a:hover,
+#lowernavbar .navbar-nav > li > a:focus,
+#lowernavbar .navbar-nav > .active,
+#lowernavbar .navbar-nav > .open > a,
+#lowernavbar .navbar-nav > .open > a:hover {
   color: white;
   background: #05dd43;
   box-shadow: inset 0 0 0 rgba(0,0,0,0);
@@ -346,6 +350,28 @@ a:hover, a:focus {
 #lowernavbar .navbar-collapse {
   border:0;
 }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    background:#05dd43;
+    opacity: 0.8;
+    border:0;
+}
+
+.dropdown-menu > li > a {
+    text-shadow: 0 0 0;
+    padding-top:20px;
+    padding-bottom:20px;
+    color:white;
+    font-weight: bold;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color:#04b637;
+    background: transparent;
+}
+
 /* The side navigation button */
 #sideNavButton {
   text-decoration: none;
