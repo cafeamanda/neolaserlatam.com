@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <!-- The 3 meta tags above *MUST* come first in the head; -->
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <title>Log In | Neolaser Latin America</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet" type='text/css'>
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  <style>
+    body {
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #msg {
+      display: none;
+      color:red;
+    }
+  </style>
+</head>
+<body>
+    <form class="form-horizontal" id="loginForm" name="loginForm">
+        <div class="form-group">
+            <img src="images/neolaser-logo-form.png" width=200 class="center-block">
+        </div>
+         <div class="form-group">
+            <input id="username" name="usernameInput" type="text" ng-model="username" class="form-control" placeholder="username" required>
+         </div>
+         <div class="form-group">
+            <input id="password" name="passwordInput" type="password" ng-model="password" class="form-control" placeholder="password" required>
+         </div>
+         <div class="form-group">
+            <button id="submit" type="submit" class="btn btn-success btn-xs form-control">Login</button>
+         </div>
+         <span id="msg">* Username and password don't match.</span>
+    </form>
+
+  <!-- jQuery v2.2.4 -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    jQuery("#submit").on('click', function(e) {
+      e.preventDefault();
+      var usernameInput, passwordInput;
+      usernameInput = jQuery('#username').val();
+      passwordInput = jQuery('#password').val();
+      if (usernameInput.toLowerCase() === 'neoclient' && passwordInput === 'neolaser000') {
+        jQuery('#loginForm').trigger("reset");
+        window.open('clientexclusive.html', '_blank');
+      } else if (usernameInput.length > 0 && passwordInput.length > 0) {
+        jQuery('#loginForm').trigger("reset");
+        jQuery("#username").focus();
+        jQuery("#msg").css("display","block").fadeOut(3000);
+      }
+    });
+  </script>
+</body>
+</html>
