@@ -505,6 +505,19 @@ a:hover, a:focus {
   top:42.5%;
 }
 
+.call-for-event {
+    margin: 48px auto;
+    border-top: 1px solid #fafafa;
+    border-bottom: 1px solid #fafafa;
+    background-color: #0c3d2d;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.call-for-event-img {
+    padding: 15px;
+}
+
 /*
 
                   about
